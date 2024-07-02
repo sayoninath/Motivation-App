@@ -1,0 +1,183 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-bg: #eef0f5;
+  --color-shadow: 12, 13, 18;
+  --color-light: 255, 255, 255;
+
+  --radius: 15px;
+  --max-width: 760px;
+  --transition: all 0.3s linear;
+
+  --clr-grey-1: hsl(209, 61%, 12%);
+  --clr-grey-2: hsl(209, 39%, 28%);
+  --clr-grey-3: hsl(209, 33%, 40%);
+  --clr-grey-4: #f1f5f8;
+}
+
+body {
+  font-family: Ubuntu, Cantarell, "Open Sans", sans-serif;
+
+  line-height: 1.5;
+  font-size: 0.875rem;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-width: 60vw;
+  max-width: 80vw;
+  min-height: 250px;
+  max-height: 80vh;
+  padding: 1rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+  /* backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: var(--clr-grey-4);
+  box-shadow: inset 1px 1px 1px rgba(var(--color-light), 1),
+    -2px -2px 2px rgba(var(--color-light), 0.9),
+    -4px -4px 6px rgba(var(--color-light), 0.9),
+    -8px -8px 16px rgba(var(--color-light), 0.9),
+    -12px -12px 24px rgba(var(--color-light), 0.9),
+    inset -1px -1px 1px rgba(var(--color-shadow), 0.06),
+    2px 2px 2px rgba(var(--color-shadow), 0.08),
+    4px 4px 6px rgba(var(--color-shadow), 0.08),
+    8px 8px 16px rgba(var(--color-shadow), 0.08),
+    12px 12px 24px rgba(var(--color-shadow), 0.08);
+}
+
+.loading {
+  text-align: center;
+  color: var(--clr-grey-3);
+}
+
+.title {
+  font-weight: 700;
+  color: var(--clr-grey-3);
+  user-select: none;
+}
+
+#text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+  color: var(--clr-grey-1);
+}
+
+#author {
+  font-size: 0.85rem;
+  color: var(--clr-grey-2);
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  color: var(--clr-grey-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-save {
+  margin-left: 0.5rem;
+}
+
+a {
+  color: var(--clr-grey-2);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.twitter-btn {
+  margin-left: auto;
+}
+
+button:hover {
+  color: palevioletred;
+}
+
+.twitter-share-button:hover {
+  color: #00acee;
+}
+
+.Shivam {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  transform: translate(-50%);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.Shivam svg {
+  margin-right: 5px; /* Adjust as needed */
+}
+
+.Shivam:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: var(--max-width);
+    padding: 1.125rem 3rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  #text {
+    font-size: 1.5rem;
+  }
+
+  #author {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .btn-box {
+    justify-content: center;
+  }
+
+  .twitter-btn {
+    margin-left: 0;
+  }
+
+  .btn-save {
+    margin-left: 0;
+  }
+
+  button {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+}
